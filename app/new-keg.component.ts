@@ -22,11 +22,10 @@ export class NewKegComponent {
     this.onSubmitNewKeg = new EventEmitter();
   }
   addKeg(kegName: HTMLInputElement, kegBrand: HTMLInputElement, alcoholContent: HTMLInputElement, kegPrice: HTMLInputElement) {
-    console.log(kegName.value, kegBrand.value, alcoholContent.value, kegPrice.value);
-    // this.onSubmitNewKeg.emit(kegName.value, kegBrand.value, alcoholContent.value, kegPrice.value);
-    // kegName.value = "";
-    // kegBrand.value = "";
-    // alcoholContent.value = "";
-    // kegPrice.value = "";
+    this.onSubmitNewKeg.emit(kegName.value, kegBrand.value, alcoholContent.value, kegPrice.value);
+    kegName.value = "";
+    kegBrand.value = "";
+    alcoholContent.value = "";
+    kegPrice.value = "";
   }
 }
